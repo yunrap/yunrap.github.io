@@ -61,3 +61,8 @@ underscore case 방식
 </body>
 </html>
 ```
+인라인 자바스크립트 방식으로
+1. button을 눌르면 onClick 메소드를 이용해서 alert창을 나타내게하는 방식
+
+
+3.  getElementByID()로 id가 text를 찾아서 innerHTML로 그안에있는 내용을 바꾸게하는 방식을 사용하였다. 
