@@ -152,3 +152,50 @@ true
 //prompt() 함수 : 사용자한테 정보를 알려 입력을 받을때 사용
 	var age = prompt("나이를 입력하세요.", "만나이로 입력.");  
 ```
+
+visual code 플러그인
+Bracket Pair Colorizer
+Browser Preview
+ESLint
+indent-rainbow
+JavaScript (ES6) code snippets
+Live Server
+Prettier - Code formatter
+Quokka.js
+
+# 덧셈 계산기
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script 연습</title>
+    <script>
+        function calc()
+        {
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var sum;
+
+            sum = parseInt(x) + parseInt(y);
+            document.getElementById("sum").value = sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>덧셈 계산기</h1>
+    <form name="form1" action="js_ex1.html" method="POST">
+        첫번째 정수 : <input type="text" id="x" name="in_1"><br>
+        두번째 정수 : <input type="text" id="y" name="in_2"><br>
+        합계 :        <input type="text" id="sum" name="sum"><br>
+        <input type="button" value="계산하기" onclick="calc();">
+    </form>
+</body>
+</html>
+```
+
+getElementById("x") 할때 id값을 ""안에 넣어준다. 이문법을 잘기억해둔다
+
+
