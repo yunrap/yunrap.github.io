@@ -205,3 +205,5 @@ Quokka.js
 getElementById("x") 할때 id값을 ""안에 넣어준다. 이문법을 잘기억해둔다
 
 
+
+
