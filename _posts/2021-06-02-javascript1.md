@@ -175,18 +175,24 @@ Quokka.js
     <script>
         function calc()
         {
-            var x = document.getElementById("x").value;
-            var y = document.getElementById("y").value;
+            // id 값으로 사용
+            // var x = document.getElementById("x").value;
+            // var y = document.getElementById("y").value;
+            
+            //name으로 사용
+            var x = document.form1.in_1.value;
+            var y = document.form1.in_2.value;
             var sum;
 
             sum = parseInt(x) + parseInt(y);
-            document.getElementById("sum").value = sum;
+            //document.getElementById("sum").value = sum;
+            document.form1.sum.value = sum;
         }
     </script>
 </head>
 <body>
     <h1>덧셈 계산기</h1>
-    <form name="form1" action="js_ex1.html" method="POST">
+    <form name="form1" action="js_ex2.html" method="POST">
         첫번째 정수 : <input type="text" id="x" name="in_1"><br>
         두번째 정수 : <input type="text" id="y" name="in_2"><br>
         합계 :        <input type="text" id="sum" name="sum"><br>
