@@ -104,3 +104,55 @@ str instanceof Number; //false <br>
 
 이렇게 쓰면 나중에 동작안할때를 처리해줄때 사용하면 좋다.
 
+
+# 문제1 > getHours() 사용
+
+```java
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--현재 시간 new Date().getHours()
+    	현재시간이 12시 이전이면 "Good Morning"
+    	오후 6시이전이면 "Good Afternoon"
+    	그렇지 않으면 "Good evening" alert창으로 출력
+    -->
+    <p id="hello"> dd</p>
+
+    <script>
+
+         var msg = "";
+         var time = new Date().getHours();
+         console.log(time);
+
+         if(time < 12)
+         {
+             msg = "Good Morning";
+         }
+         else if(time < 18)
+         {
+             msg = "Good Afternoon";
+         }
+         else
+         {
+            msg = "Good evening";
+         }
+
+         alert(msg);
+    </script>
+
+
+</body>
+</html>
+```
+이렇게 time 변수에 getHours메소드를 사용하여 현재시간을 가져와 넘겨준다음
+
+if문으로 처리하여 alert창을 띄어주는 문제를 만들어보았다.
+
+
+
