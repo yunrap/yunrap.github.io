@@ -39,7 +39,7 @@ var num; //한변수에 여러번 대입할수는 있지만, 변수의 재선언
     document.getElementById("result").innerHTML = 
         result + "<br>";
     result = "3" * "5";
-    document.getElementById("result").innerHTML += 
+    document.getElementById("result").innerHTML +=  //여기서의 +=은 body안의 내용의 누적을 상징한다.
         result + "<br>";
     result = 1 - "문자열";
     document.getElementById("result").innerHTML +=
