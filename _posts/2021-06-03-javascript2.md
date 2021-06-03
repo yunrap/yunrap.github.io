@@ -16,9 +16,9 @@ var num; //한변수에 여러번 대입할수는 있지만, 변수의 재선언
 자바스크립트는 특정 타입의 값을 기대하는곳에 다른 타입값이 오면 자동으로 타입을 변환하여 사용
 즉, 문자열이 와야할 곳에 숫자가 오더라도 알아서 숫자를 문자열로 변환
 
-10 + "문자열";  //문자열 연결을 위해 숫자 10이 문자열로 변환됨
-"3" * "5"; // 곱셈 연산을 위해 두문자열이 모두 숫자로 변환됨
-1 - "문자열" // NAN : 정의되지않은 값이나 표현할수 없는 값
+10 + "문자열";  //문자열 연결을 위해 숫자 10이 문자열로 변환됨 <br>
+"3" * "5"; // 곱셈 연산을 위해 두문자열이 모두 숫자로 변환됨 <br>
+1 - "문자열" // NAN : 정의되지않은 값이나 표현할수 없는 값 <br>
 
 ```html
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ var num; //한변수에 여러번 대입할수는 있지만, 변수의 재선언
     <p id="result"></p>
     
     <script>
-    var result = 10 + "문자열";
+    var result = 10 + "문자열"; 
     document.getElementById("result").innerHTML = 
         result + "<br>";
     result = "3" * "5";
@@ -55,23 +55,24 @@ var num; //한변수에 여러번 대입할수는 있지만, 변수의 재선언
 
 명시적 타입 변환을 위해 자바 스크립트가 제공하는 전역함수
 
-Number("10") // 숫자 10
-String(true) // 문자열 "true"
-Boolean(0); // 불리언 false
-Object(3); // 숫자 3
+Number("10") // 숫자 10 <br>
+String(true) // 문자열 "true" <br>
+Boolean(0); // 불리언 false <br>
+Object(3); // 숫자 3 <br>
+
 
 # 변수의 선언과 초기화
-var month;  //변수의 선언 , undefined
-date = 35;
+var month;  //변수의 선언 , undefined <br>
+date = 35; <br>
 
 선언된 변수는 나중에 초기화할수있고, 선언과 동시에 초기화 할수도 있다.
-var month;          //변수의 선언
-var date = 25;    // 변수의 선언과 동시에 초기화
-month = 12;       //변수의 초기화
+var month;          //변수의 선언 <br>
+var date = 25;    // 변수의 선언과 동시에 초기화 <br>
+month = 12;       //변수의 초기화 <br>
 
 쉼표연산자를 이용하여 여러변수를 동시에 선언하거나 초기화 할 수 있다.
-var month, date;                //여러 변수를 한번에 선언
-var hours = 7, minutes = 15;    //여러 변수를 선언과 동시에 초기화
-month = 10, date = 5;           //여러 변수를 한번에 초기화
+var month, date;                //여러 변수를 한번에 선언 <br>
+var hours = 7, minutes = 15;    //여러 변수를 선언과 동시에 초기화 <br>
+month = 10, date = 5;           //여러 변수를 한번에 초기화 <br>
 
 
