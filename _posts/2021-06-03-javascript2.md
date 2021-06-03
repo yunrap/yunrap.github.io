@@ -76,3 +76,31 @@ var hours = 7, minutes = 15;    //여러 변수를 선언과 동시에 초기화
 month = 10, date = 5;           //여러 변수를 한번에 초기화 <br>
 
 
+
+# instanceof
+
+피연산자의 객체가 특정 객체의 인스턴스인지 아닌지를 확인함
+var str = new String("이것은 문자열입니다.");
+str instanceof Object;   // true <br>
+str instanceof String;  // true <br>
+str instanceof Array; // false <br>
+str instanceof Number; //false <br>
+
+
+# void
+
+어떤 타입의 값이 오던지 언제나 undefined 값만을 반환
+
+<a href="javascript:void(0)"> 이링크는 동장하지 않습니다</a>
+
+
+```html
+<a href="javascript:void(0)"> 이 링크는 동작 않함.</a>
+<br>
+<a href="javascript:void(document.body.style.backgroundColor='yellow')">
+    이링크도 동작하지 않지만, 배경식을 바꿔줌.
+</a>
+```
+
+이렇게 쓰면 나중에 동작안할때를 처리해줄때 사용하면 좋다.
+
