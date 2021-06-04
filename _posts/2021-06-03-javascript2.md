@@ -150,9 +150,11 @@ str instanceof Number; //false <br>
 </body>
 </html>
 ```
-이렇게 time 변수에 getHours메소드를 사용하여 현재시간을 가져와 넘겨준다음
+  - 이렇게 time 변수에 getHours메소드를 사용하여 현재시간을 가져와 넘겨준다음
 
-if문으로 처리하여 alert창을 띄어주는 문제를 만들어보았다.
+  - if문으로 처리하여 alert창을 띄어주는 문제를 만들어보았다.
 
+
+# 
 
 
