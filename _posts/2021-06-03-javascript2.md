@@ -314,3 +314,5 @@ pattern 사용법 알아두자
 </body>
 </html>
 ```
+  
+innerHtml 로 할수있는법도 찾아보자 
