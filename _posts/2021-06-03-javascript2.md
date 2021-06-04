@@ -284,3 +284,33 @@ dom구조를 더 공부해서 자유롭게 쓸수 있도록 해야겠다.
 
   
 pattern 사용법 알아두자
+  
+# 표그리기 문제
+
+  ```html
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단표</title>
+</head>
+<body>
+<h1>구구단표</h1>
+<table border="2" width="50%">
+
+    <script>
+        for(var i=1; i<=9; i++)
+        {
+            document.write("<tr>");
+            document.write("<td>" + i + "</td>" );
+            for(var j=2; j<9; j++)
+            {
+                document.write("<td>"+ i * j + "</td>");
+            }
+            document.write("</tr>");
+        }
+    </script>
+</table>
+</body>
+</html>
+```
