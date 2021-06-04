@@ -214,5 +214,73 @@ str instanceof Number; //false <br>
 ```
 
 처음에 dom구조를 이해 못해서 숫자값을 이해하지 못했다.
+dom구조를 더 공부해서 자유롭게 쓸수 있도록 해야겠다.
+
+# document.write 사용 <while>
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    </head>
+    <body>  
+
+        <script>
+            var i = 0;
+            
+            while(i<10)
+            {
+                document.write("카운트 : " , i , "<br>");
+                i++;
+            }
+
+            /* 실행결과 
+            	카운드 : 0
+            	카운트 : 1
+            	...
+            	카운트 : 9
+            */
+        </script>
+        
+    </body>
+</html>
+```
 
 
+
+# document.write 사용 <do ~while>
+  
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    </head>
+    <body>  
+
+        <script>
+            var i = 0;
+
+            do
+            {
+                document.write("카운트 : " , i , "<br>");
+                i++;
+            }
+            while(i<10);
+          
+            /* 실행결과 
+            	카운드 : 0
+            	카운트 : 1
+            	...
+            	카운트 : 9
+            */
+        </script>
+        
+    </body>
+</html>
+```
+
+  
+pattern 사용법 알아두자
