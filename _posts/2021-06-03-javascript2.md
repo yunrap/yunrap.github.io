@@ -155,6 +155,64 @@ str instanceof Number; //false <br>
   - if문으로 처리하여 alert창을 띄어주는 문제를 만들어보았다.
 
 
-# 
+# 숫자 맞추기 게임
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>숫자 맞추기</title>
+<script>
+    var computerNumber = 44;
+    var gNumber = 0;
+
+    function test1()
+    {
+        var number = parseInt(document.form1.user.value);
+        gNumber++;
+        alert(1);
+        alert(number);
+
+        if(number == computerNumber)
+            {
+                result= "성공입니다.";
+            }
+            else if(number < computerNumber)
+            {
+                result = "입력값이 작습니다.";
+            }
+            else
+            {
+                result = "입력값이 높습니다.";
+            }
+
+            document.form1.result.value = result;
+            document.form1.guesses.value = gNumber;
+    }
+
+
+
+</script>
+</head>
+<body>
+    <form name="form1">
+    <h1>숫자 맞추기 게임</h1>
+    이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에 있습니다.
+    <br>
+    숫자:
+    <input type="text" id="user" name="user" size="5">
+    <input type="button" value="확인" onclick="test1();">
+    <br>
+    추측횟수: 
+    <input type="text" id="guesses" name="guesses" size="5">
+    힌트:
+    <input type="text" id="result" name="result" size="16">
+</body>
+</form>
+</html>
+```
+
+처음에 dom구조를 이해 못해서 숫자값을 이해하지 못했다.
 
 
