@@ -18,7 +18,7 @@
 
 # 사전에 필요한 설정
 
-## Noder.js 모듈 설치
+## Node.js 모듈 설치
 
 왜설치해야할까?
 javasciprt front end & back end의 통합기술이다.
