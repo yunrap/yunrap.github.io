@@ -6,8 +6,8 @@ tags: [Javascript]
 ---
 
 # 자바스크립트 문법
-var javascript = 10;
-var Javascript = 10; 
+  - var javascript = 10;
+  - var Javascript = 10; 
 
 대소문자가 다르면 서로다른 변수로 인식한다.
 
@@ -19,6 +19,7 @@ var Javascript = 10;
 # 식별자 작성 방식
 
 Camel Case 방식
+
 : 첫번째 단어는 모두 소문자로, 그 다음단어부터는 첫문자만 대문자로 작성하는 방식
 
 
