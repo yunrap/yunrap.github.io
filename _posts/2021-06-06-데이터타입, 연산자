@@ -354,17 +354,110 @@ null
 즉 자료형이 Object를 가리키고있다는것이다.
 
 
+# 참조 타입의 특성
+
+자바스크립트는 객체가참조값으로 처리된다.
+
+배열이나 함수또한 객체이므로 참조타입이다.
+
+따라서 아래의 소스를 보면 
+
+objB = objA 는 같은 주소를 갖기때문에
+objA.val 이랑 objB.val 값이 같은 값이 나올수있는것이다.
 
 
+```javascript
+var objA = {
+    val : 40
+};
+var objB = objA;
+
+console.log(objA.val);
+console.log(objB.val);
+
+objB.val = 50;
+console.log(objA.val);
+console.log(objB.val);
+```
+
+```console
+40
+40
+50
+50
+```
+
+## 객체 비교
+
+== 연산자를 이용하여 두객체를 비교할때고 객체의 프로퍼티값이 아닌 참조값을 비교한다.
+
+```javascript
+var a = 100;
+var b = 100;
+
+var objA = { value: 100};
+var objB = { value: 100};
+var objC = objB;
+
+console.log(a ==  b); //true
+console.log(objA == objB);  //false
+console.log(objB == objC); //true
+
+```
+
+var a , var b는 기본타입의 변수이다.
+그럴때는 값을 비교한다.
+따라서 true 를 리턴한다.
 
 
+objA == objB 는 객체타입으로 참조타입이므로
+서로 다른 주소를 가지고있으므로 == 연산자사용시 false를 리턴한다.
 
 
+(objB == objC)은 전에
+var objC = objB 이렇게
+주소값을 objC 에 대입을해줬으므로 같은 곳을 바라보므로
+주소값이 서로같아 true를 리턴한다.
 
 
+## 참조에의한 호출방식
+
+```javascript
+var a = 100;
+var objA = {value : 100};
+
+function changeArg(num, obj)
+{   
+    num = 200;
+    obj.value = 200;
+
+    console.log(num); // 출력값 : 200
+    console.log(obj); // 출력값 : 200
+}
+
+changeArg(a, objA);
+
+console.log(a);   //출력값 : 100
+console.log(objA); // 출력값 : 200
+
+```
+
+```console
+200
+{ value: 200 }
+100
+{ value: 200 }
+```
 
 
+여기서중요한점은 맨마지막 줄소스이다. objA 가 200이나온이유를안다면
+참조에 의한 함수 호출방식을 이해했다고 생각한다.
 
+
+주소값을 changeArg 함수에서 받아서 같은주소의 를 바라보고 그값에 200을 넣어줬기때문에
+해당 함수를 벗어나도 값이 변하지 않다는것! 이것이 참조호출방식이자, 자바스크립트의 객체라고 생각하면된다.
+
+# 프로토타입
 
 
 
