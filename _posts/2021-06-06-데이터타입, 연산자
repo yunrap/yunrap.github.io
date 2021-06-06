@@ -71,6 +71,298 @@ console.log(Math.floor(num));
 ```
 
 
+### Math.floor vs parseInt
+
+```javascript
+let n = 1.1;
+console.log(Math.floor(n), parseInt(n)); // 1 1
+
+n = 1.9;
+console.log(Math.floor(n), parseInt(n)); // 1 1
+
+n = -1.1;
+console.log(Math.floor(n), parseInt(n)); // -2 -1
+
+n = -1.9;
+console.log(Math.floor(n), parseInt(n)); // -2 -1
+
+```
+
+이두 메서드의 차이를 보자면
+Math.floor 메서드 : 양수일때 내림 , 음수일때 내림
+parseInt 메서드 : 양수일때 내림 , 음수일때 올림
+
+이라는 차이점이있다. 이부분은 이것만 알고 가볍게 넘어갈려 한다.
+
+
+## 문자열
+
+
+자바스크립트는 한번 생성된 문자열은 읽기만 가능하지 수정은 불가능하다
+따라서 아래의 결과값을 보면 0번째방을 지정해서 T로 바꿔도 결과값은 바뀌지않는다는 사실을 알수있다.
+
+
+```javascript
+// str 문자열 생성
+var str = 'test';
+console.log(str[0], str[1], str[2], str[3]);
+
+//문자열의 첫글짜를 대문자로 변경?
+str[0] = 'T';
+console.log(str);
+```
+
+```console
+t e s t
+test
+```
+
+
+## null과 undefined
+
+이 두타입은 모두 값이 비워있음을 나타낸다.
+
+undefined : 자료형이 결정되지 않은 변수
+null      : 자료형은 객체인데, 비어있는 변수이다.
+
+즉 undefined는 자료형미지정
+null은 비어있는 변수라고 알면된다.
+
+따라서 만약 null타입 변수인지 확인할때라면
+
+```javascript
+var nullVar = null;
+
+console.log(typeof nullVar === null);
+console.log(nullVar === null);
+```
+
+```console
+false
+true
+```
+
+비워있는 변수명 === null
+이렇게해서 변수의 값이 비워있는지 확인해볼수있다.
+
+
+# 자바스크립트 객체 타입
+
+자바스크립트에서 객체를 생성하는 방법은 크게 세가지가 있다.
+1. Object() 객체 생성자함수
+2. 객체 리터럴 
+3. 생성자 함수 
+
+
+## Object() 생성자 함수이용
+
+자바스크립트에서는 객체를 생성할때 Object() 생성자 함수를 제공한다.
+
+```javascript
+// Object()를 이용해서 foo 빈 객체 생성
+var foo = new Object();
+
+// foo 객체 프로퍼티 생성
+foo.name = 'foo';
+foo.age = 30;
+foo.gender = 'male';
+
+console.log(typeof foo);
+console.log(foo);
+```
+
+```console
+object
+{ name: 'foo', age: 30, gender: 'male' }
+```
+
+## 객체리터럴 방식 이용
+
+```javascript
+// 객체 리터럴 방식으로 foo 객체 생성
+
+var foo = {
+    name : 'foo',
+    age : 30,
+    gender : 'male'
+
+};
+
+console.log(typeof foo);
+console.log(foo);
+```
+
+
+# 객체 프로퍼티 읽기/쓰기/갱신
+
+
+## 객체 리터럴 방식을 통한 foo객체 생성 
+
+```javascript
+var foo = {
+    name : 'foo',
+    major : 'computer science',
+};
+
+//객체 프로퍼티 읽기
+console.log(foo.name); // foo출력
+console.log(foo['name']);  //foo출력 , 대괄호표기법
+console.log(foo.nickname); // undefined출력
+```
+
+이것을 볼때 대괄호 표기법은 반드시 
+[   ] 안에  '   '를 표현해야한다는 법이있다
+
+만약에 '    '를 안넣어주거나.
+foo.nickname 처럼 객체에 없는 프로퍼티에 접근하는경우에는
+undefined값이 출력된다.
+
+
+## 객체 프로퍼티 갱신
+
+```javascript
+// 객체 리터럴 방식을 통한 foo객체 생성
+var foo = {
+    name : 'foo',
+    major : 'computer science',
+};
+
+foo.major = 'today is sunday';
+console.log(foo.major);
+console.log(foo['major']);
+```
+
+```console
+today is sunday
+today is sunday
+```
+
+이렇게 갱신도 할 수 있다.
+
+## 객체 프로퍼티 동적 생성
+
+```javascript
+var foo = {
+    name : 'foo',
+    major : 'computer science',
+};
+
+foo.age = 30;
+console.log(foo.age);  // 30 출력
+```
+
+이렇게 동적으로 생성을 해줄 수도잇따.
+
+## 대괄호 표기법만 사용해야하는경우
+
+```javascript
+var foo = {
+    name : 'foo',
+    major : 'computer science',
+};
+
+foo('full-name') = 'foo bar';
+console.log(foo['full-name']); // 출력값 : foo bar
+console.log(foo.full-name); // 접근하지 못한다.
+```
+  
+ 접근하려는 프로퍼티가 예약어이거나 표현식일때는 
+ 반드시 대괄호 표기법으로 사용해야한다.
+ 
+ 
+## for in 문과 객체 프로퍼티 출력
+
+```javascript
+var foo = {
+    name : 'foo',
+    age : 30,
+    major : 'mutimedia'
+};
+
+//for in 문을 이용한 객체 프로퍼티 출력
+var prop;
+for(prop in foo) // for ( 변수 in 객체)
+{
+    console.log(prop, foo[prop]);
+}
+```
+
+```console
+name foo
+age 30
+major mutimedia
+
+```
+
+처음으로 for in 구문을 써보니 어떻게 써야할지몰라 서칭을해보았다.
+
+for( 변수 in 객체)
+
+변수가 0,1,2,씩 증가하여 객체 프로퍼티가하나씩 할당되는 역활을 하는것이다.
+
+
+
+
+## 객체 프로퍼티 삭제
+
+```javascript
+var foo = {
+    name : 'foo',
+    age : 30,
+    major : 'mutimedia'
+};
+
+
+console.log(foo.name);
+delete foo.name;
+console.log(foo.name);
+
+delete foo;
+console.log(foo.age);
+```
+
+```console
+foo
+undefined
+30
+```
+
+이렇게 delete를 통해 객체안 프로퍼티값을 삭제시킬순있다.
+하지만 객체를 delete할순없다는 사실을 알아두어야한다.
+
+그런데 문득드는 생각이 프로퍼티값이 없을때 왜 undefiend나오는지, null이랑 아직도 헷갈린다.
+undefined는 자료형이지정되지않는 비어있는 변수고 null은 값이 지정되지않는 변수인데...
+
+
+그래서 서칭을 해보고 다시 정리해보았다.
+
+
+# null undefined의 차이점
+
+undefined
+- 값을 할당하지 않은 변수
+- 매서드와 선언에서 변수가 할당받지 않은 경우
+- 함수가 값을 return 하지 않았을때
+
+즉 값이 할당되지않은 비어있는 객체를 말한다.
+
+
+null
+- 해당변수가 어떤 객체도 가리키지 않는다.
+- 어떤값이 의도적으로 비어있음을 표현한다.
+
+즉 자료형이 Object를 가리키고있다는것이다.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
