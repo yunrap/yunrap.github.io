@@ -1,0 +1,78 @@
+---
+title 인사이드 자바스크립트 1. 타입과 변수
+date: 2021-06-06 17:49:00
+categories: [Language, Javascript]
+tags: [Javascript, inside_javascipt]
+---
+
+# 자바스크립트 기본타입
+
+자바스크린트는 느슨한 타입 체크 언어이다.
+
+타입을 미리 지정하지 않고, var이라는 키워드로 변수를 선언한다. 
+
+따라서 이렇게 선언한변수는 데이터 타입에 맞게 저장하는 것이 가능하다. 
+
+```javascript
+var intNum = 10;
+var floatNum = 0.1;
+
+//문자열 타입
+var singleQuoteStr = 'single quote string';
+var doubuleQuoteStr = "double quote string";
+var singleChar = 'a';
+
+//불린 타입
+var boolVar = true;
+
+//undefined 타입
+var emptyVar;
+
+//null 타입
+var nullVar = null;
+
+console.log(typeof intNum,
+            typeof floatNum,
+            typeof singleChar,
+            typeof doubuleQuoteStr,
+            typeof singleChar,
+            typeof boolVar,
+            typeof emptyVar,
+            typeof nullVar    
+    );
+```
+
+
+
+
+```console
+number number string string string boolean undefined object
+```
+
+
+## 숫자
+
+자바스크립트에서는 모든 숫자를 실수로 처리하므로 나눗셈 연산을 해야할때는 주의해야한다.
+c언어처럼 나눗셈 연산결과인 정수/정수 = 정수형처럼 나오고싶다면
+
+Math.floor() 자바스크립트 메서드를 사용하면된다.
+
+
+```javacript
+var num = 5/2;
+
+console.log(num);
+console.log(Math.floor(num));
+```
+
+```console
+2.5
+2
+```
+
+
+
+
+
+
+
