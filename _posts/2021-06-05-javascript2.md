@@ -1,6 +1,6 @@
 ---
 title: 자바스크립트-3. 타입과 변수
-date: 2021-06-03 11:33:00
+date: 2021-06-05 11:33:00
 categories: [Language, Javascript]
 tags: [Javascript]
 ---
