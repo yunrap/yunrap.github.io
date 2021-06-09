@@ -43,7 +43,7 @@ yeji@Yejiui-MacBookPro workspace % cd Nodejs
 yeji@Yejiui-MacBookPro Nodejs % npm install eslint --save-dev
 ```
 
- ![Desktop View]({{ "/assets/img/esling_pic.png" | relative_url}})
+ ![Desktop View]({{ "/assets/img/favicons/esling_pic.png" | relative_url}})
  
  
   node modules 파일과 package-lock.jason이라는 파일이 생긴것을 볼수있습니다.
@@ -78,7 +78,7 @@ vs code에서 파일을 저장할때마다 자동으로 고쳐지게 하고 싶�
 vs code 설정 윈도우, 리눅스에서는 ctrl + , 
 맥에서는 cmd + , 으로 들어갑니다.
 
- ![Desktop View]({{ "/assets/img/settingjson.png" | relative_url}})
+ ![Desktop View]({{ "/assets/img/favicons/settingjson.png" | relative_url}})
  
  settings.json으로 들어가서
 
