@@ -17,7 +17,10 @@ timezone: Asia/Seoul
 # --------------------------
 title: yunrap                          # the main title
 
-tagline: 개발 일기   # it will display as the sub-title
+tagline: 나는 날마다 코딩실력이 늘고 있다
+         2. 나는 코딩공부하는것이 미치도록 재미있다
+         3. 나의 미래는 현재 나의 생각과 행동에 따라 결정된다
+         4. 남과 비교하지 말고, 나 자신의 어제와 오늘을 비교하자  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Blog
