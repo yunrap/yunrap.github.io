@@ -31,7 +31,7 @@ pattern에서 사용하는 input 타입은 form에서 submit을 누를때 동작
 문자열의 숫자를 number로 바꿔주는 역활
 
 Number( ~.value    ) = 
-
+ 
 대괄호안의 값이 없다면 Number는 0을 반환한다.
 
 그렇다는 사실을 알고 
