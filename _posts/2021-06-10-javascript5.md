@@ -1,3 +1,10 @@
+---
+title: 자바스크립트-5. 
+date : 2021-06-10 12:00:00
+categories: [Language, Javascript]
+tags: [Javascript]
+---
+
 # pattern
 
 pattern을 눌러줬을때 동작이되지않아서 검색해본결과
