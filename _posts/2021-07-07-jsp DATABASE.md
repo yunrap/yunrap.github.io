@@ -8,7 +8,7 @@ tags: [jsp]
 
 
 
-# jsp 표현식 <% %>
+# jsp 표현식 
 
 변수나 메소드일때는 세미콜론을 사용하지않는다.
 
@@ -51,7 +51,7 @@ tags: [jsp]
 
 
 1. tomcat밑에 lib 폴더에 ojdbc5를 넣어줬다.
-2. 
+
 
 
 # index_jdbc.jsp파일
