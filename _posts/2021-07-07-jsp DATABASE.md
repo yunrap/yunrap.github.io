@@ -54,7 +54,7 @@ tags: [jsp]
 
 
 
-# index_jdbc.jsp파일
+# index jdbc jsp파일
 
 jsp파일을 만들어서
 
