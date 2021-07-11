@@ -1,4 +1,3 @@
-
 ---
 title: jsp DATABASE
 date : 2021-07-07 12:00:00
@@ -48,9 +47,7 @@ tags: [jsp]
 2. DB 연결
 3. PreparedStatement 객체생성
 
-
-
-1. tomcat밑에 lib 폴더에 ojdbc5를 넣어줬다.
+tomcat밑에 lib 폴더에 ojdbc5를 넣어줬다.
 
 
 
