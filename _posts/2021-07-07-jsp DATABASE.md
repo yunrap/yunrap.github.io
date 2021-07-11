@@ -1,3 +1,13 @@
+
+---
+title: jsp DATABASE
+date : 2021-07-07 12:00:00
+categories: [Language, jsp]
+tags: [jsp]
+---
+
+
+
 # jsp 표현식 <% %>
 
 변수나 메소드일때는 세미콜론을 사용하지않는다.
