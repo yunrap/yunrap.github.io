@@ -1,8 +1,8 @@
 ---
-title: Database-2. 회원가입화면 구현
+title: jsp_project-2. 회원가입화면 구현
 date: 2021-07-12 11:33:00
-categories: [Jsp, jsp_project1]
-tags: [jsp_project1]
+categories: [Jsp, jsp_project]
+tags: [jsp_project]
 ---
 
 
