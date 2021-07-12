@@ -54,7 +54,7 @@ tomcat밑에 lib 폴더에 ojdbc5를 넣어줬다.
 
 jsp파일을 만들어서
 
-<포트포워딩>
+포트포워딩
 
 ```
 String url = "jdbc:oracle:thin:@집 포트포워딩:1523:xe";
