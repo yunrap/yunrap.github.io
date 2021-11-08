@@ -1,19 +1,19 @@
 # The label text of site.
 
 panel:
-  lastmod: Recent Update
-  trending_tags: Trending Tags
-  toc: Contents
+  lastmod: 최근 업데이트
+  trending_tags: 인기 태그
+  toc: 목차
 
 post:
-  relate_posts: Further Reading
-  share: Share
+  relate_posts: 이 블로그 다른 글
+  share: 공유
   button:
-    next: Newer
-    previous: Older
+    next: 다음
+    previous: 이전
 
-search_hint: Search   # text show on search bar
+search_hint: 검색   # text show on search bar
 
-pin_prompt: Pinned    # pinned prompt
+pin_prompt: 고정    # pinned prompt
 
 read_time_unit: min   # see posts' time to read
